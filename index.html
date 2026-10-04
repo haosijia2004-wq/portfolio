@@ -49,10 +49,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 .cube-wrap.floating{animation:float 4s ease-in-out infinite}
 .cube-wrap.hit{animation:cubeHit .6s ease}
 .cube-wrap.opening{animation:cubeOpen 1s ease forwards}
-.cube-wrap.opened{opacity:.4;transform:scale(.85);animation:float 4s ease-in-out infinite}
+.cube-wrap.opened{animation:float 4s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
 @keyframes cubeHit{0%{transform:scale(1) rotate(0)}25%{transform:scale(1.05) rotate(-3deg) translateX(-5px)}50%{transform:scale(.95) rotate(2deg) translateX(3px)}75%{transform:scale(1.02) rotate(-1deg)}100%{transform:scale(1) rotate(0)}}
-@keyframes cubeOpen{0%{transform:scale(1) rotate(0);opacity:1}25%{transform:scale(1.15) rotate(8deg);opacity:.9}50%{transform:scale(.95) rotate(-5deg);opacity:.7}75%{transform:scale(1.05) rotate(3deg);opacity:.5}100%{transform:scale(.85) rotate(0);opacity:.4}}
+@keyframes cubeOpen{0%{transform:scale(1) rotate(0)}25%{transform:scale(1.15) rotate(8deg)}50%{transform:scale(.95) rotate(-5deg)}75%{transform:scale(1.05) rotate(3deg)}100%{transform:scale(1) rotate(0)}}
 
 .cube{width:100%;height:100%;position:relative;transform-style:preserve-3d}
 .cube-face{position:absolute;width:100%;height:100%;border-radius:24px;background:linear-gradient(135deg,rgba(212,165,196,.25),rgba(200,180,210,.15));border:1px solid rgba(212,165,196,.3);box-shadow:0 8px 32px rgba(212,165,196,.2),inset 0 1px 0 rgba(255,255,255,.4),0 0 60px rgba(212,165,196,.15);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center}
@@ -123,18 +123,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 @keyframes scatter5{0%{opacity:0;transform:scale(.2) translate(-30px,-40px) rotate(0)}50%{opacity:1;transform:scale(1.15) translate(0,0) rotate(80deg)}70%{transform:scale(.95) translate(0,0) rotate(100deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(0)}}
 
 /* Object labels */
-.obj-label{position:absolute;top:-55px;left:50%;transform:translateX(-50%) translateY(10px);background:rgba(255,255,255,.95);padding:10px 18px;border-radius:14px;font-size:13px;text-align:center;white-space:nowrap;opacity:0;pointer-events:none;transition:all .3s ease;box-shadow:0 4px 20px rgba(74,74,74,.12);border:1px solid rgba(212,165,196,.25)}
+.obj-label{position:absolute;top:-65px;left:50%;transform:translateX(-50%) translateY(10px);background:rgba(255,255,255,.95);padding:12px 20px;border-radius:14px;font-size:14px;text-align:center;white-space:nowrap;opacity:0;pointer-events:none;transition:all .3s ease;box-shadow:0 4px 20px rgba(74,74,74,.12);border:1px solid rgba(212,165,196,.25)}
 .obj-label .label-cn{color:var(--text);font-weight:600;display:block;margin-bottom:3px;font-size:13px}
 .obj-label .label-en{color:var(--text-light);font-size:10px;letter-spacing:1px;display:block;margin-bottom:3px}
 .obj-label .label-arrow{color:var(--primary);font-size:11px}
 .object-item:hover .obj-label{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* Object sizes - enlarged for desktop */
-.object-item[data-obj="chest"]{width:200px;height:200px}
-.object-item[data-obj="badge"]{width:160px;height:160px}
-.object-item[data-obj="gear"]{width:160px;height:160px}
-.object-item[data-obj="stamp"]{width:130px;height:130px}
-.object-item[data-obj="envelope"]{width:140px;height:140px}
+.object-item[data-obj="chest"]{width:300px;height:300px}
+.object-item[data-obj="badge"]{width:240px;height:240px}
+.object-item[data-obj="gear"]{width:240px;height:240px}
+.object-item[data-obj="stamp"]{width:190px;height:190px}
+.object-item[data-obj="envelope"]{width:210px;height:210px}
 
 /* Sub Pages */
 .sub-page{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:500;opacity:0;pointer-events:none;transition:opacity .6s ease;overflow-y:auto;overflow-x:hidden}
@@ -248,11 +248,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
   .home-title h1{font-size:24px;letter-spacing:4px}
   .character{width:130px}
   .object-item{width:100px!important;height:100px!important}
-  .object-item[data-obj="chest"]{width:150px!important;height:150px!important;top:34%!important;left:6%!important}
-  .object-item[data-obj="badge"]{width:120px!important;height:120px!important;top:12%!important;left:10%!important}
-  .object-item[data-obj="gear"]{width:120px!important;height:120px!important;top:12%!important;right:10%!important;left:auto!important}
-  .object-item[data-obj="stamp"]{width:100px!important;height:100px!important;top:62%!important;left:16%!important}
-  .object-item[data-obj="envelope"]{width:110px!important;height:110px!important;top:50%!important;right:10%!important;left:auto!important}
+  .object-item[data-obj="chest"]{width:200px!important;height:200px!important;top:34%!important;left:6%!important}
+  .object-item[data-obj="badge"]{width:160px!important;height:160px!important;top:12%!important;left:10%!important}
+  .object-item[data-obj="gear"]{width:160px!important;height:160px!important;top:12%!important;right:10%!important;left:auto!important}
+  .object-item[data-obj="stamp"]{width:130px!important;height:130px!important;top:62%!important;left:16%!important}
+  .object-item[data-obj="envelope"]{width:150px!important;height:150px!important;top:50%!important;right:10%!important;left:auto!important}
   .sub-page-content{padding:80px 20px 40px}
   .works-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr}
