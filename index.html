@@ -102,7 +102,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 /* Scattered Objects */
 .objects-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:30;opacity:0;transition:opacity .5s}
 .objects-container.visible{opacity:1}
-.object-item{position:absolute;width:80px;height:80px;cursor:pointer;pointer-events:auto;opacity:0;transform:scale(0);transition:transform .3s ease}
+.object-item{position:absolute;width:100px;height:100px;cursor:pointer;pointer-events:auto;opacity:0;transform:scale(0);transition:transform .3s ease}
 .object-item.visible{opacity:1;transform:scale(1)}
 .object-item img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(74,74,74,.12));transition:all .4s cubic-bezier(.23,1,.32,1)}
 .object-item:hover img{transform:scale(1.08) rotate(5deg);filter:drop-shadow(0 12px 30px rgba(74,74,74,.18))}
@@ -116,25 +116,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 .obj-scatter-4{animation:scatter4 1.2s cubic-bezier(.23,1,.32,1) .15s forwards}
 .obj-scatter-5{animation:scatter5 1.2s cubic-bezier(.23,1,.32,1) .25s forwards}
 
-@keyframes scatter1{0%{opacity:0;transform:scale(.2) translate(40px,40px) rotate(0)}60%{opacity:1;transform:scale(1.1) translate(0,0) rotate(180deg)}80%{transform:scale(.95) translate(0,0) rotate(200deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(180deg)}}
-@keyframes scatter2{0%{opacity:0;transform:scale(.2) translate(60px,-20px) rotate(0)}60%{opacity:1;transform:scale(1.1) translate(0,0) rotate(-150deg)}80%{transform:scale(.95) translate(0,0) rotate(-170deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(-160deg)}}
-@keyframes scatter3{0%{opacity:0;transform:scale(.2) translate(-40px,30px) rotate(0)}60%{opacity:1;transform:scale(1.1) translate(0,0) rotate(120deg)}80%{transform:scale(.95) translate(0,0) rotate(140deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(130deg)}}
-@keyframes scatter4{0%{opacity:0;transform:scale(.2) translate(50px,-30px) rotate(0)}60%{opacity:1;transform:scale(1.1) translate(0,0) rotate(-100deg)}80%{transform:scale(.95) translate(0,0) rotate(-120deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(-110deg)}}
-@keyframes scatter5{0%{opacity:0;transform:scale(.2) translate(-30px,-40px) rotate(0)}60%{opacity:1;transform:scale(1.1) translate(0,0) rotate(80deg)}80%{transform:scale(.95) translate(0,0) rotate(100deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(90deg)}}
+@keyframes scatter1{0%{opacity:0;transform:scale(.2) translate(40px,40px) rotate(0)}50%{opacity:1;transform:scale(1.15) translate(0,0) rotate(180deg)}70%{transform:scale(.95) translate(0,0) rotate(200deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(0)}}
+@keyframes scatter2{0%{opacity:0;transform:scale(.2) translate(60px,-20px) rotate(0)}50%{opacity:1;transform:scale(1.15) translate(0,0) rotate(-150deg)}70%{transform:scale(.95) translate(0,0) rotate(-170deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(0)}}
+@keyframes scatter3{0%{opacity:0;transform:scale(.2) translate(-40px,30px) rotate(0)}50%{opacity:1;transform:scale(1.15) translate(0,0) rotate(120deg)}70%{transform:scale(.95) translate(0,0) rotate(140deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(0)}}
+@keyframes scatter4{0%{opacity:0;transform:scale(.2) translate(50px,-30px) rotate(0)}50%{opacity:1;transform:scale(1.15) translate(0,0) rotate(-100deg)}70%{transform:scale(.95) translate(0,0) rotate(-120deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(0)}}
+@keyframes scatter5{0%{opacity:0;transform:scale(.2) translate(-30px,-40px) rotate(0)}50%{opacity:1;transform:scale(1.15) translate(0,0) rotate(80deg)}70%{transform:scale(.95) translate(0,0) rotate(100deg)}100%{opacity:1;transform:scale(1) translate(0,0) rotate(0)}}
 
 /* Object labels */
-.obj-label{position:absolute;top:-40px;left:50%;transform:translateX(-50%) translateY(10px);background:rgba(255,255,255,.95);padding:8px 16px;border-radius:12px;font-size:11px;text-align:center;white-space:nowrap;opacity:0;pointer-events:none;transition:all .3s ease;box-shadow:0 4px 16px rgba(74,74,74,.1);border:1px solid rgba(212,165,196,.2)}
-.obj-label .label-cn{color:var(--text);font-weight:500;display:block;margin-bottom:2px}
-.obj-label .label-en{color:var(--text-light);font-size:9px;letter-spacing:1px;display:block;margin-bottom:2px}
-.obj-label .label-arrow{color:var(--primary);font-size:10px}
+.obj-label{position:absolute;top:-55px;left:50%;transform:translateX(-50%) translateY(10px);background:rgba(255,255,255,.95);padding:10px 18px;border-radius:14px;font-size:13px;text-align:center;white-space:nowrap;opacity:0;pointer-events:none;transition:all .3s ease;box-shadow:0 4px 20px rgba(74,74,74,.12);border:1px solid rgba(212,165,196,.25)}
+.obj-label .label-cn{color:var(--text);font-weight:600;display:block;margin-bottom:3px;font-size:13px}
+.obj-label .label-en{color:var(--text-light);font-size:10px;letter-spacing:1px;display:block;margin-bottom:3px}
+.obj-label .label-arrow{color:var(--primary);font-size:11px}
 .object-item:hover .obj-label{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* Object sizes */
-.object-item[data-obj="chest"]{width:140px;height:140px}
-.object-item[data-obj="badge"]{width:110px;height:110px}
-.object-item[data-obj="gear"]{width:110px;height:110px}
-.object-item[data-obj="stamp"]{width:95px;height:95px}
-.object-item[data-obj="envelope"]{width:100px;height:100px}
+/* Object sizes - enlarged for desktop */
+.object-item[data-obj="chest"]{width:200px;height:200px}
+.object-item[data-obj="badge"]{width:160px;height:160px}
+.object-item[data-obj="gear"]{width:160px;height:160px}
+.object-item[data-obj="stamp"]{width:130px;height:130px}
+.object-item[data-obj="envelope"]{width:140px;height:140px}
 
 /* Sub Pages */
 .sub-page{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:500;opacity:0;pointer-events:none;transition:opacity .6s ease;overflow-y:auto;overflow-x:hidden}
@@ -247,15 +247,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
   .cube-face .q-mark{font-size:56px}
   .home-title h1{font-size:24px;letter-spacing:4px}
   .character{width:100px}
-  .object-item{width:80px!important;height:80px!important}
-  .object-item[data-obj="chest"]{width:110px!important;height:110px!important;top:38%!important;left:8%!important}
-  .object-item[data-obj="badge"]{width:90px!important;height:90px!important;top:15%!important;left:12%!important}
-  .object-item[data-obj="gear"]{width:90px!important;height:90px!important;top:15%!important;right:12%!important;left:auto!important}
-  .object-item[data-obj="stamp"]{width:75px!important;height:75px!important;top:58%!important;left:10%!important}
-  .object-item[data-obj="envelope"]{width:80px!important;height:80px!important;top:55%!important;right:10%!important;left:auto!important}
+  .object-item{width:100px!important;height:100px!important}
+  .object-item[data-obj="chest"]{width:150px!important;height:150px!important;top:36%!important;left:10%!important}
+  .object-item[data-obj="badge"]{width:120px!important;height:120px!important;top:14%!important;left:14%!important}
+  .object-item[data-obj="gear"]{width:120px!important;height:120px!important;top:14%!important;right:14%!important;left:auto!important}
+  .object-item[data-obj="stamp"]{width:100px!important;height:100px!important;top:56%!important;left:12%!important}
+  .object-item[data-obj="envelope"]{width:110px!important;height:110px!important;top:54%!important;right:12%!important;left:auto!important}
   .sub-page-content{padding:80px 20px 40px}
   .works-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr}
+  .obj-label{padding:8px 12px;top:-45px}
+  .obj-label .label-cn{font-size:11px}
+  .obj-label .label-en{font-size:9px}
+  .obj-label .label-arrow{font-size:9px}
 }
 
 /* Utility */
@@ -337,7 +341,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 
 <!-- Scattered Objects - Desktop positions use %, mobile overridden in CSS -->
 <div class="objects-container" id="objectsContainer">
-  <div class="object-item" data-obj="badge" style="top:18%;left:25%" onclick="openPage('about')">
+  <div class="object-item" data-obj="badge" style="top:20%;left:28%" onclick="openPage('about')">
     <div class="obj-label">
       <span class="label-cn">ABOUT ME</span>
       <span class="label-en">个人简介</span>
@@ -345,7 +349,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
     </div>
     <img src="./images/badge.png" alt="徽章">
   </div>
-  <div class="object-item" data-obj="chest" style="top:42%;left:20%" onclick="openPage('works')">
+  <div class="object-item" data-obj="chest" style="top:42%;left:24%" onclick="openPage('works')">
     <div class="obj-label">
       <span class="label-cn">SELECTED WORKS</span>
       <span class="label-en">作品展示</span>
@@ -353,7 +357,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
     </div>
     <img src="./images/chest.png" alt="宝箱">
   </div>
-  <div class="object-item" data-obj="gear" style="top:18%;right:25%" onclick="openPage('skills')">
+  <div class="object-item" data-obj="gear" style="top:20%;right:28%" onclick="openPage('skills')">
     <div class="obj-label">
       <span class="label-cn">SKILLS</span>
       <span class="label-en">技能能力</span>
@@ -361,7 +365,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
     </div>
     <img src="./images/gear.png" alt="齿轮">
   </div>
-  <div class="object-item" data-obj="stamp" style="top:60%;left:22%" onclick="openPage('experience')">
+  <div class="object-item" data-obj="stamp" style="top:58%;left:28%" onclick="openPage('experience')">
     <div class="obj-label">
       <span class="label-cn">EXPERIENCE</span>
       <span class="label-en">经历</span>
@@ -369,7 +373,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
     </div>
     <img src="./images/stamp.png" alt="邮票">
   </div>
-  <div class="object-item" data-obj="envelope" style="top:58%;right:24%" onclick="openPage('contact')">
+  <div class="object-item" data-obj="envelope" style="top:56%;right:28%" onclick="openPage('contact')">
     <div class="obj-label">
       <span class="label-cn">CONTACT</span>
       <span class="label-en">联系方式</span>
@@ -574,15 +578,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 // 修改以下内容即可自定义网站，无需修改其他代码。
 // 每次修改后保存文件，重新推送到 GitHub 即可生效。
 //
-// 【图片使用说明】
-// 1. 作品封面图和详情图建议用图床链接（如 GitHub raw、sm.ms、路过图床等）
-// 2. 如果不想放整张贴板，可以只截取展板中的核心视觉部分（如IP角色、效果图等）
-//    上传截图后的图片到图床，把链接替换到下方即可
-// 3. 如果某个作品暂时没有图片，把 images 留空数组 []，会显示"作品图片待补充"
+// 【图片使用说明 - 重要】
+// 1. 作品图片请用图床链接（推荐：sm.ms、imgur、GitHub raw、路过图床等免费图床）
+// 2. 展板图片建议先截图/抠图：只截取展板中的核心内容（如IP角色、效果图、平面图等），
+//    不要把一整张展板直接放进去。例如IP作品的展板，可以截图只留下IP角色和三视图部分。
+// 3. 上传截图到图床后，把链接替换到下方对应作品的 images 数组中即可
+// 4. 如果某个作品暂时没有图片，把 images 留空数组 []，会显示"作品图片待补充"
 //
 // 【作品分类说明】
 // category 字段用于筛选，可选值：'space'(空间设计)、'visual'(视觉设计)、'ip'(IP/文创)、'other'(其他)
 // 在下方 filterButtons 中配置筛选按钮
+//
+// 【如何修改作品信息】
+// 找到对应的作品对象，直接修改 title(标题)、desc(描述)、keywords(关键词) 即可
+// images 数组里的每个字符串就是一个图片链接，可以添加、删除或替换
 
 const PORTFOLIO_CONFIG = {
   // === 筛选按钮配置 ===
