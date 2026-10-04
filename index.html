@@ -595,56 +595,43 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 
 const PORTFOLIO_CONFIG = {
   // === 筛选按钮配置 ===
+  // 四大设计分类：空间设计 / IP设计 / 品牌设计 / 海报设计
   filterButtons: [
     { label: '全部', category: 'all' },
     { label: '空间设计', category: 'space' },
-    { label: '视觉设计', category: 'visual' },
-    { label: 'IP / 文创', category: 'ip' },
-    { label: '其他创意', category: 'other' }
+    { label: 'IP设计', category: 'ip' },
+    { label: '品牌设计', category: 'brand' },
+    { label: '海报设计', category: 'poster' }
   ],
 
   // === 作品列表 ===
-  // 每个作品：title(标题), category(分类), keywords(关键词数组), desc(描述), images(图片URL数组)
+  // 每个分类：title(分类名称), category(分类标识), keywords(关键词), desc(描述), images(图片URL数组)
   // 封面图自动取 images[0]
   works: [
     {
-      title: "浮廊壹玖叁陆旧厂改造共享艺术空间设计",
+      title: "空间设计",
       category: "space",
-      keywords: ["旧厂房改造", "共享艺术空间", "工业记忆", "水管元素", "手工坊", "艺术展览", "下沉共享区", "二层浮廊", "挑台"],
-      desc: "以旧厂房更新为设计背景，将原有工业空间转化为具有展览、手工体验和交流功能的共享艺术空间。设计通过工业水管元素、浮廊和挑台等形式，将入口、工坊、展览、中央下沉共享区以及二层空间联系起来。",
+      keywords: ["旧厂改造", "校园空间", "摊位设计", "模块化社区", "古村落更新"],
+      desc: "涵盖旧厂房改造共享艺术空间、校园公共空间改造、诚信小铺摊位设计、苏州吴中山水边界模块化生长社区、黄山徽州古村落更新等空间设计项目。",
       images: [
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109800147-fk5i68jh2n.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109800097-4ade5t6b9ol.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109805303-6kuk5m9h33f.jpg",
-        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109810943-oh8vcrnbryr.jpg"
-      ]
-    },
-    {
-      title: "学校校区公共空间改造",
-      category: "space",
-      keywords: ["校园公共空间", "空间节点", "休息区域", "环境改造"],
-      desc: "对校园公共空间进行改造设计，优化空间布局，提升校园环境的舒适度和功能性。",
-      images: [
+        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109810943-oh8vcrnbryr.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109789202-iow7vujtwmd.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109789148-r9l1ua8qt89.jpg",
-        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109789103-ybdvg43gdoa.jpg"
-      ]
-    },
-    {
-      title: "学校诚信小铺摊位设计",
-      category: "space",
-      keywords: ["诚信小铺", "摊位设计", "木质结构", "校园文化", "展示"],
-      desc: "以校园诚信小铺为设计对象，结合传统小铺元素与现代展示需求，打造具有校园文化的特色摊位空间。",
-      images: [
+        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109789103-ybdvg43gdoa.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109881379-3uqskb5z28i.png",
-        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109881328-8n1wva5ydxd.png"
+        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109881328-8n1wva5ydxd.png",
+        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109819998-je0ybbeg9l.png",
+        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109827200-qwmcc7squsj.png"
       ]
     },
     {
-      title: "原创小老虎IP及文创系列",
+      title: "IP设计",
       category: "ip",
-      keywords: ["IP形象", "文创产品", "水杯", "钥匙扣", "雨伞", "抱枕", "手机壳", "冰箱贴"],
-      desc: "原创小老虎IP形象设计，并延展至系列文创产品，包括水杯、钥匙扣、雨伞、暖手袋、抱枕、手套、眼罩、背包、手机壳、热水袋、针织帽、毛巾、冰箱贴等。",
+      keywords: ["IP形象", "文创延展", "吉祥物", "冰雪主题", "小老虎"],
+      desc: "原创小老虎IP形象及系列文创产品设计，吉林冰雪主题IP吉祥物设计等地域文化IP创作。",
       images: [
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109752759-vblep029orh.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109753191-3pvit31q98r.jpg",
@@ -653,46 +640,21 @@ const PORTFOLIO_CONFIG = {
       ]
     },
     {
-      title: "吉林冰雪主题IP设计",
-      category: "ip",
-      keywords: ["吉林", "冰雪", "长白山", "东北冬季", "吉祥物"],
-      desc: "以吉林冰雪文化为主题的IP形象设计，融合长白山、东北冬季等地域特色元素。",
-      images: []  // 暂无图片，会显示"作品图片待补充"
+      title: "品牌设计",
+      category: "brand",
+      keywords: ["品牌视觉", "VI设计", "标识设计", "视觉系统"],
+      desc: "品牌视觉识别系统设计，包含品牌标识、视觉规范、应用延展等内容。（图片可后续补充上传）",
+      images: []
     },
     {
-      title: "海洋环保主题海报设计",
-      category: "visual",
-      keywords: ["SOUND OF THE OCEAN", "海洋环保", "公益视觉", "海报设计", "AI辅助创意"],
-      desc: "为海洋发声系列海报设计，包含为蓝鲸发声、为水母发声、为海龟发声三个主题，传达海洋保护理念。",
+      title: "海报设计",
+      category: "poster",
+      keywords: ["海洋环保", "公益海报", "招贴设计", "视觉实验", "创意表达"],
+      desc: "海洋环保主题系列海报、招贴及其他创意视觉作品，探索不同风格与视觉语言的表达。",
       images: [
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109928382-w59q884gavp.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109928347-jdrkeho2lps.jpg",
-        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109931780-snl7y06krb.jpg"
-      ]
-    },
-    {
-      title: "苏州吴中山水边界模块化生长社区",
-      category: "space",
-      keywords: ["苏州", "吴中", "太湖", "山水边界", "模块化", "社区", "生态"],
-      desc: "以苏州吴中山水边界为设计背景，探索模块化生长社区的可能性，融合生态理念与建筑创新。",
-      images: [
-        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109819998-je0ybbeg9l.png",
-        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109827200-qwmcc7squsj.png"
-      ]
-    },
-    {
-      title: "黄山徽州古村落更新设计",
-      category: "space",
-      keywords: ["徽州", "古村落", "水系", "四水归堂", "马头墙", "乡村更新"],
-      desc: "以黄山徽州古村落为更新对象，保留传统建筑特色，结合现代设计手法进行乡村空间更新。",
-      images: []  // 暂无图片，会显示"作品图片待补充"
-    },
-    {
-      title: "海报/招贴等其他创意作品",
-      category: "other",
-      keywords: ["海报设计", "招贴", "视觉实验", "创意表达"],
-      desc: "各类海报、招贴及创意视觉作品集合，探索不同风格与视觉语言的表达。",
-      images: [
+        "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109931780-snl7y06krb.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109848648-8gq7bhrdyu3.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109848686-os06gc79dk.jpg",
         "https://sign.miorausercontent.com/file/732782580632021/2026/10/04/g39bf34gfsy1uyr8kvp6v/1791109848725-cknw2qhpvxn.jpg"
