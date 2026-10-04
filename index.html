@@ -804,7 +804,7 @@ const worksData = [
 ];
 
 // ===== ENTRANCE ANIMATION =====
-window.addEventListener('load', () => {
+(function startEntrance() {
   setTimeout(() => {
     document.getElementById('bgDecor').classList.add('visible');
   }, 300);
@@ -820,7 +820,15 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('homeTitle').classList.add('visible');
   }, 1400);
-});
+})();
+
+// Safety fallback: ensure content is visible even if animations fail
+setTimeout(() => {
+  document.getElementById('cubeWrap').classList.add('visible');
+  document.getElementById('characterWrap').classList.add('visible');
+  document.getElementById('homeTitle').classList.add('visible');
+  document.getElementById('bgDecor').classList.add('visible');
+}, 3000);
 
 // ===== CHARACTER JUMP =====
 function triggerJump() {
