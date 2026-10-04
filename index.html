@@ -24,7 +24,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 
 /* Navigation */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;transition:all .4s ease;background:transparent}
-.nav.scrolled{background:rgba(250,248,246,.85);backdrop-filter:blur(12px);box-shadow:0 2px 20px var(--shadow)}
+.nav.scrolled{background:rgba(250,248,246,.92);box-shadow:0 2px 20px var(--shadow)}
 .nav-brand{display:flex;flex-direction:column;gap:2px}
 .nav-brand .name{font-size:18px;font-weight:600;letter-spacing:2px;color:var(--text)}
 .nav-brand .name-cn{font-size:14px;color:var(--text-light);font-weight:400}
@@ -284,7 +284,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 </nav>
 
 <!-- Background Decorations -->
-<div class="bg-decor" id="bgDecor">
+<div class="bg-decor visible" id="bgDecor">
   <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
     <g class="bg-line">
       <path d="M200,200 L400,150 L600,250 L800,180"/>
@@ -303,7 +303,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 
 <!-- Home Section -->
 <section id="home">
-  <div class="cube-wrap" id="cubeWrap">
+  <div class="cube-wrap visible floating" id="cubeWrap">
     <div class="cube" id="cube">
       <div class="cube-face front"><span class="q-mark">?</span></div>
       <div class="cube-face back"></div>
@@ -319,14 +319,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
     </div>
   </div>
 
-  <div class="home-title" id="homeTitle">
+  <div class="home-title visible" id="homeTitle">
     <h1>我的设计世界</h1>
     <div class="en-title">MY DESIGN WORLD</div>
     <div class="subtitle">点击小人，开启我的作品集</div>
     <div class="subtitle-en">CLICK TO EXPLORE</div>
   </div>
 
-  <div class="character-wrap" id="characterWrap" onclick="triggerJump()">
+  <div class="character-wrap visible" id="characterWrap" onclick="triggerJump()">
     <div class="click-hint">点击我<br><span style="font-size:9px;opacity:.7">CLICK ME</span></div>
     <img src="./images/character.png" alt="设计师小人" class="character" id="character">
     <div class="character-shadow"></div>
